@@ -10,6 +10,7 @@ public class InWindow {
     Student[] students = new Student[maxStudent];
     for(int x = 0;x < maxStudent;x++) {
         scan.nextLine();
+        System.out.println("New Student !");
         System.out.print("Enter the student's name: ");
         String name = scan.nextLine();
         System.out.print("Enter the student's grade: ");
@@ -25,6 +26,13 @@ public class InWindow {
         students[x]=student;
     }
 
+//https://stackoverflow.com/questions/12462318/find-a-value-in-an-array-of-objects-in-javascript
+    double totalGradepoint = 0;
+    for(int y = 0;y < maxStudent; y++){
+        totalGradepoint+=students[y].getGradepoint();
+    }
+    double averageGradepoint = totalGradepoint/maxStudent;
+    System.out.println("The average gpa is: "+averageGradepoint);
 
 
 

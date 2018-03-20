@@ -1,21 +1,26 @@
 
 public class Student {
 
-    private String name;
-    private int grade;
-    private double gpa;
-    private String school;
-    private String street;
-    private int clazz;
+    private String mname;
+    private int mgrade;
+    private double mgpa;
+    private String mschool;
+    private String mstreet;
+    private int mclazz;
 
     //constructor
 
     public Student(String name, int grade, double gpa, String school, int clazz) {
-        this.name = name;
-        this.grade = grade;
-        this.school = school;
+        mname = name;
+        mgrade = grade;
+        mschool = school;
+        mgpa = gpa;
         //this.street = street;
-        this.clazz = clazz;
+        mclazz = clazz;
+    }
+
+    public double getGradepoint(){
+    return mgpa;
     }
 
 }
